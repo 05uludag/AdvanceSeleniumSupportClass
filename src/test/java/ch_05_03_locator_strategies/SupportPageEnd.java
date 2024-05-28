@@ -21,7 +21,7 @@ public class SupportPageEnd extends PageFactory {
         this.driver = driver;
         //initElements(new AjaxElementLocatorFactory(driver, 10),
         //        this);
-        initElements(new VisibleAjaxElementFactory(driver, 10),
+        initElements(new AjaxElementFactory(driver, 10),
                 this);
 
     }

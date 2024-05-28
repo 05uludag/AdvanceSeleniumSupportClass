@@ -1,10 +1,12 @@
-package ch_05_04_pros_cons.end;
+package ch_05_04_pros_cons;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.List;
 
 public class SupportClassesPageEnd {
@@ -50,7 +52,7 @@ public class SupportClassesPageEnd {
     }
 
     public String waitForMessage(){
-        new WebDriverWait(driver, 10).
+        new WebDriverWait(driver, Duration.ofSeconds(10)).
                 until(ExpectedConditions.visibilityOf(message));
         return message.getText();
     }

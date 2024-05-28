@@ -1,4 +1,4 @@
-package ch_05_04_pros_cons.end;
+package ch_05_04_pros_cons.begin;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PageFactoryTestEnd {
+public class PageFactoryTestBegin {
 
     WebDriver driver;
 
@@ -27,12 +27,11 @@ public class PageFactoryTestEnd {
     public void sendMessageWithWaitInPageObject(){
 
         SupportClassesPage page = new SupportClassesPage(driver);
-        Assertions.assertEquals(0, page.countSingleMessageHistory());
+
         page.clickResendSingleButton();
 
         Assertions.assertEquals("Received message: selected 1",
-                                page.waitForMessage());
-        Assertions.assertEquals(1, page.countSingleMessageHistory());
+                page.waitForMessage());
     }
 
     @AfterEach

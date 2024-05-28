@@ -6,13 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoadableSupportPage extends LoadableComponent {
+public class LoadableSupportBegin {
     private final WebDriverWait wait;
     private final WebDriver driver;
 
@@ -25,7 +24,7 @@ public class LoadableSupportPage extends LoadableComponent {
     @FindBy(how = How.ID, using="message")
     private WebElement message;
 
-    public LoadableSupportPage(WebDriver driver){
+    public LoadableSupportBegin(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -44,34 +43,11 @@ public class LoadableSupportPage extends LoadableComponent {
     }
 
     public MessageHistoryBegin messageHistory() {
-        return new MessageHistoryEnd(driver);
+        return new MessageHistoryBegin(driver);
     }
 
     public void waitTillReady() {
         wait.until(ExpectedConditions.titleIs("Support Classes Example"));
         wait.until(ExpectedConditions.elementToBeClickable(resendSelect));
-    }
-
-    @Override
-    protected void load() {
-        driver.get("https://eviltester.github.io/supportclasses/#_2000");
-    }
-
-    @Override
-    protected void isLoaded() throws Error {
-        boolean ready=false;
-
-        try {
-            boolean hasTitleLoaded = driver.getTitle().equals("Support Classes Example");
-            boolean hasButtonLoaded = resendSelect.isEnabled();
-
-            ready = hasTitleLoaded && hasButtonLoaded;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if(!ready){
-            throw new Error("Page has not loaded");
-        }
     }
 }

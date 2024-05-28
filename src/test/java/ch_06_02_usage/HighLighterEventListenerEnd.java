@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 
-public class HighLighterEventListener extends AbstractWebDriverEventListener {
+public class HighLighterEventListenerEnd extends AbstractWebDriverEventListener {
     private WebElement lastElement;
 
     // JavaScript to set style off use element.style.border = 'none';

@@ -1,4 +1,4 @@
-package ch_05_05_page_synchronisation;
+package ch_05_06_component_synchronisation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PageSyncObjectTest {
+public class PageSyncObject {
 
     WebDriver driver;
 
@@ -17,26 +17,23 @@ public class PageSyncObjectTest {
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
     }
 
     @Test
     public void canSeeMessageInHistory(){
 
         // to show a component on the page
-        LoadableSupportPage page = new LoadableSupportPage(driver);
+        LoadableSupport page = new LoadableSupport(driver);
 
-        // we should really wait for page to load prior to doing anything,
-        // to make sure it is valid to work with
         page.get();
 
         page.select("Option 2");
         Assertions.assertEquals("Received message: selected 2",
-                                page.getMessage());
-        MessageHistoryEnd history = page.messageHistory();
+                                    page.getMessage());
+        MessageHistory history = page.messageHistory();
 
         // wait for the history component to be ready
-        history.waitTillReady();
+       //history.get();   buna dikkat burda bişey yaptık ama çözemedim bende kapattım
 
         Assertions.assertEquals(1, history.countSingleHistoryMessages());
         Assertions.assertEquals("Received message: selected 2",

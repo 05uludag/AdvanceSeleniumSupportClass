@@ -1,9 +1,8 @@
 package ch_06_02_usage.begin;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 
-public class HighLighterEventListener extends AbstractWebDriverEventListener {
+public class HighLighterEventListenerBegin extends AbstractWebDriverEventListener {
 
     // JavaScript to set style off use element.style.border = 'none';
     // JavaScript to set style on use element.style.border='10px dashed red';

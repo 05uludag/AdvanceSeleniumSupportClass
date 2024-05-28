@@ -1,5 +1,6 @@
-package ch_06_01_event_firing.end;
-
+package ch_06_01_event_firing;
+public class ExampleEventFiringTestEnd {
+/** eventfire yerine artık WebDriverListener var
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class ExampleEventFiringTest {
+public class ExampleEventFiringTestEnd {
 
     WebDriver driver;
 
@@ -64,5 +65,5 @@ public class ExampleEventFiringTest {
         public void afterFindBy(By by, WebElement element, WebDriver driver) {
             System.out.println("Finished looking for " + by.toString());
         }
-    }
+    } */
 }

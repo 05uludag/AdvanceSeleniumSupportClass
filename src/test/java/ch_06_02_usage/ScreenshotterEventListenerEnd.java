@@ -7,7 +7,7 @@ import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import java.io.File;
 import java.io.IOException;
 
-public class ScreenshotterEventListener extends AbstractWebDriverEventListener{
+public class ScreenshotterEventListenerEnd extends AbstractWebDriverEventListener{
 
     @Override
     public void afterFindBy(By by, WebElement element, WebDriver driver) {

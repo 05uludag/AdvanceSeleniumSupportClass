@@ -1,4 +1,4 @@
-package ch_05_05_page_synchronisation;
+package ch_05_06_component_synchronisation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoadableSupportPage extends LoadableComponent {
+public class LoadableSupport extends LoadableComponent {
     private final WebDriverWait wait;
     private final WebDriver driver;
 
@@ -25,7 +25,7 @@ public class LoadableSupportPage extends LoadableComponent {
     @FindBy(how = How.ID, using="message")
     private WebElement message;
 
-    public LoadableSupportPage(WebDriver driver){
+    public LoadableSupport(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -38,19 +38,14 @@ public class LoadableSupportPage extends LoadableComponent {
 
     public String getMessage() {
         wait.until(ExpectedConditions.visibilityOf(message));
-        wait.until(ExpectedConditions.
-                        textToBePresentInElement(message, "Received"));
+        wait.until(ExpectedConditions.textToBePresentInElement(message, "Received"));
         return message.getText();
     }
 
-    public MessageHistoryBegin messageHistory() {
-        return new MessageHistoryEnd(driver);
+    public MessageHistory messageHistory() {
+        return new MessageHistory(driver);
     }
 
-    public void waitTillReady() {
-        wait.until(ExpectedConditions.titleIs("Support Classes Example"));
-        wait.until(ExpectedConditions.elementToBeClickable(resendSelect));
-    }
 
     @Override
     protected void load() {
@@ -59,13 +54,14 @@ public class LoadableSupportPage extends LoadableComponent {
 
     @Override
     protected void isLoaded() throws Error {
+
         boolean ready=false;
 
         try {
             boolean hasTitleLoaded = driver.getTitle().equals("Support Classes Example");
             boolean hasButtonLoaded = resendSelect.isEnabled();
-
             ready = hasTitleLoaded && hasButtonLoaded;
+
         } catch (Exception e) {
             e.printStackTrace();
         }

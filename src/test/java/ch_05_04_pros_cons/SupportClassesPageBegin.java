@@ -1,13 +1,15 @@
-package ch_05_04_pros_cons.begin;
+package ch_05_04_pros_cons;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.List;
 
-public class SupportClassesPage extends PageFactory{
+public class SupportClassesPageBegin extends PageFactory{
     private final WebDriver driver;
 
 /*
@@ -39,26 +41,26 @@ public class SupportClassesPage extends PageFactory{
     @FindBy(how=How.ID, using = "history")
     private WebElement historyTitle;
 
-    public SupportClassesPage(WebDriver driver){
+    public SupportClassesPageBegin(WebDriver driver){
         this.driver = driver;
         initElements(driver, this);
     }
 
     public String waitForMessage(){
-        new WebDriverWait(driver, 10).
+        new WebDriverWait(driver, Duration.ofSeconds(10)).
                 until(ExpectedConditions.visibilityOf(message));
         return message.getText();
     }
-
     public int countSingleMessageHistory(){
+
         return singleMessages.size();
     }
-
     public String getHistoryTitle(){
+
         return historyTitle.getText();
     }
-
     public void clickResendSingleButton() {
+
         singleResendButton.click();
     }
 }

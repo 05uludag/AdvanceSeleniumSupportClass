@@ -1,4 +1,4 @@
-package ch_05_04_pros_cons.end;
+package ch_05_03_locator_strategies;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PageFactoryTestEnd {
+public class TestBegin {
 
     WebDriver driver;
 
@@ -19,21 +19,23 @@ public class PageFactoryTestEnd {
 
         driver = new ChromeDriver();
 
-        driver.get("https://eviltester.github.io/supportclasses");
+        // trigger time delays with a hash e.g. #2000
+        // trigger extra delay to display with an underscore #_2000
+        driver.get("https://eviltester.github.io/supportclasses/#2000");
 
     }
 
     @Test
-    public void sendMessageWithWaitInPageObject(){
+    public void sendMessage(){
 
-        SupportClassesPage page = new SupportClassesPage(driver);
-        Assertions.assertEquals(0, page.countSingleMessageHistory());
-        page.clickResendSingleButton();
+        SupportPageBegin page = new SupportPageBegin(driver);
+
+        page.singleResendButton.click();
 
         Assertions.assertEquals("Received message: selected 1",
-                                page.waitForMessage());
-        Assertions.assertEquals(1, page.countSingleMessageHistory());
+                page.waitForMessage());
     }
+
 
     @AfterEach
     public void closeDriver(){

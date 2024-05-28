@@ -65,7 +65,9 @@ public class FluentWaitExampleTestEnd {
     public void usingFluentWait(){
 
         final WebElement resendButton = driver.findElement(By.id("resend-select"));
+
         resendButton.click();
+
 
         WebElement singleListParent = driver.findElement(By.id("single-list"));
         FluentWait wait = new FluentWait<WebElement>(singleListParent).

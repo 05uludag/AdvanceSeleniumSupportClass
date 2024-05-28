@@ -5,7 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad929fbe-8327-41a2-8210-9a023c922629" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_01_02_quick_wins/QuickWinTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_01_02_quick_wins/QuickWinTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_02_01_elementAbstraction/SelectExampleTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_02_01_elementAbstraction/SelectExampleTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_02_02_custom/CreateButtonAbstractionTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_02_02_custom/CreateButtonAbstractionTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_03_01_locators/LocatorsTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_03_01_locators/LocatorsTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_03_02_custom/CustomLocatorsTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_03_02_custom/CustomLocatorsTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_04_03_fluent_wait/FluentWaitExampleTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_04_03_fluent_wait/FluentWaitExampleTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_01_page_objects/SupportClassesTestPageBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_01_page_objects/SupportClassesTestPageEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_02_page_factory/PageFactoryTestBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_02_page_factory/PageFactoryTestEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_02_page_factory/SupportClassesPageBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_02_page_factory/SupportClassesPageEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_03_locator_strategies/SupportPageBegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch_05_03_locator_strategies/SupportPageEnd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +52,99 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ExpectedConditionsExampleTestBegin.explicitWaitUsingExpectedConditions.executor": "Run",
+    "JUnit.FluentWaitExampleTestEnd.explicitWaitIsFluent.executor": "Run",
+    "JUnit.QuickWinTestBegin.waitForMessage.executor": "Run",
+    "JUnit.QuickWinTestEnd.colors.executor": "Run",
+    "Maven.AdvanceSelenium [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Kultigin_Uludag/AppData/Local/Temp/4c8a9ea2-001f-446e-b3b4-8eee1a455f35_Ex_Files_Advanced_Selenium.zip.f35/Ex_Files_Advanced_Selenium/Exercise Files/support-classes/AdvanceSelenium/src/test/java",
     "onboarding.tips.debug.path": "C:/Users/Kultigin_Uludag/AppData/Local/Temp/4c8a9ea2-001f-446e-b3b4-8eee1a455f35_Ex_Files_Advanced_Selenium.zip.f35/Ex_Files_Advanced_Selenium/Exercise Files/support-classes/AdvanceSelenium/src/main/java/org/example/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kultigin_Uludag\AppData\Local\Temp\4c8a9ea2-001f-446e-b3b4-8eee1a455f35_Ex_Files_Advanced_Selenium.zip.f35\Ex_Files_Advanced_Selenium\Exercise Files\support-classes\AdvanceSelenium\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FluentWaitExampleTestEnd.explicitWaitIsFluent">
+    <configuration name="ExpectedConditionsExampleTestBegin.explicitWaitUsingExpectedConditions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvanceSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch_04_02_expected_conditions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch_04_02_expected_conditions" />
+      <option name="MAIN_CLASS_NAME" value="ch_04_02_expected_conditions.ExpectedConditionsExampleTestBegin" />
+      <option name="METHOD_NAME" value="explicitWaitUsingExpectedConditions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FluentWaitExampleTestEnd.explicitWaitIsFluent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvanceSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch_04_03_fluent_wait.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch_04_03_fluent_wait" />
+      <option name="MAIN_CLASS_NAME" value="ch_04_03_fluent_wait.FluentWaitExampleTestEnd" />
+      <option name="METHOD_NAME" value="explicitWaitIsFluent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickWinTestBegin.waitForMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvanceSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch_01_02_quick_wins.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch_01_02_quick_wins" />
+      <option name="MAIN_CLASS_NAME" value="ch_01_02_quick_wins.QuickWinTestBegin" />
+      <option name="METHOD_NAME" value="waitForMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickWinTestEnd.colors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AdvanceSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch_01_02_quick_wins.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch_01_02_quick_wins" />
+      <option name="MAIN_CLASS_NAME" value="ch_01_02_quick_wins.QuickWinTestEnd" />
+      <option name="METHOD_NAME" value="colors" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FluentWaitExampleTestEnd.explicitWaitIsFluent" />
+        <item itemvalue="JUnit.ExpectedConditionsExampleTestBegin.explicitWaitUsingExpectedConditions" />
+        <item itemvalue="JUnit.QuickWinTestBegin.waitForMessage" />
+        <item itemvalue="JUnit.QuickWinTestEnd.colors" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
